@@ -36,7 +36,7 @@ function compileSass()  {
 		.pipe(plumber())
 		.pipe(sass(sassOptions))
 		.pipe(autoprefixer(apOptions))
-		.pipe(cleanCSS({compatibility: 'ie8'}))
+		// .pipe(cleanCSS({compatibility: 'ie8'}))
 		.pipe(sourcemaps.write())
 		.pipe(gulp.dest('./'))
 	.on('end', function() {
