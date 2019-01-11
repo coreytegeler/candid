@@ -1,0 +1,194 @@
+/*
+Theme Name: Candid
+Text Domain: candid
+Version: 1.0.0
+License: GNU General Public License version 2.0
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+All files, unless otherwise stated, are released under the GNU General Public License
+version 2.0 (http://www.gnu.org/licenses/gpl-2.0.html)
+*/
+
+@import 'vars.scss';
+
+html, body {
+	margin: 0;
+	background: #fff;
+	font-family: 'Algebra', serif;
+	@include smText;
+}
+
+h1, h2, h3 {
+	margin: 0;
+	font-weight: normal;
+}
+
+h1 {
+	@include xlText;
+}
+
+h2 {
+	@include lgText;
+}
+
+h3 {
+	@include mdText;
+}
+
+a, a:visited {
+	text-decoration: none;
+	color: black;
+}
+
+.strong {
+	font-weight: bold;
+}
+
+p {
+	margin: 0 0 2rem 0;
+}
+
+header {
+	border-bottom: 2px solid $orange;
+	svg {
+		width: 100%;
+		max-width: 5rem;
+		height: auto;
+	}
+}
+
+.inner {
+	margin-left: 6rem;
+	padding: 2rem 6rem .25rem .75rem;
+	display: table;
+	border-left: 2px solid $orange;
+	main & {
+		padding-bottom: 4rem;
+	}
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+li {
+	margin: 0 0 1rem 0;
+}
+
+section {
+	margin: 0 0 3rem 0;
+	clear: both;
+}
+
+h1 {
+	svg {
+		width: auto;
+		height: .8em;
+	}
+}
+
+.logos {
+	width: 100%;
+	margin: 1rem 0 0 0;
+	display: table;
+	.logo {
+		margin: 0 1rem 0 0;
+		padding: .5rem;
+		float: left;
+		border: 2px solid $orange;
+		img {
+			width: auto;
+			height: 3rem;
+			display: table;
+		}
+	}
+}
+
+.cols {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.col-sm {
+	width: 30%;
+}
+.col-lg {
+	width: 70%;
+	max-width: 30rem;
+}
+
+.accordions {
+
+}
+
+.item {
+	padding: 0;
+	margin: 1rem 0 0 0;
+	border-bottom: 1px solid black;
+	&:first-child {
+		margin: 0;
+	}
+}
+
+.toggle {
+	width: 100%;
+	display: block;
+	position: relative;
+	padding: 0 0 1rem 0;
+	backface-visibility: hidden;
+	transform-style: preserve-3d;
+	&::before, &::after {
+		width: .25rem;
+		height: 1rem;
+		position: absolute;
+		right: .5rem;
+		top: 0;
+		background: $orange;
+		transition: all 200ms ease;
+		content: '';
+	}
+	&::before {
+		transform: rotate(0deg);
+	}
+	&::after {
+		transform: rotate(90deg);
+	}
+	&:hover {
+		cursor: pointer;
+	}
+	.opened & {
+		&::before {
+			transform: rotate(-45deg);
+		}
+		&::after {
+			transform: rotate(45deg);
+		}
+	}
+}
+
+.collapsable {
+	height: 0;
+	overflow: hidden;
+	transition: height 300ms ease-in-out;
+	.opened & {
+		
+	}
+	ul {
+
+	}
+}
+
+.content {
+	display: table;
+	padding: 0 1rem 0 0;
+}
+
+.ext {
+	opacity: .4;
+	display: table;
+	font-family: 'Akkurat', serif;
+	@include xsText;
+}

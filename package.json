@@ -1,0 +1,41 @@
+{
+  "name": "candid",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coreytegeler/candid.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/coreytegeler/candid/issues"
+  },
+  "homepage": "https://github.com/coreytegeler/candid#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-clean-css": "^3.10.0",
+    "gulp-cli": "^2.0.0",
+    "gulp-coffee": "^2.3.5",
+    "gulp-if": "^2.0.2",
+    "gulp-plumber": "^1.1.0",
+    "gulp-pug": "^3.3.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^3.2.0",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-uglify": "^3.0.1",
+    "gulp-util": "^3.0.8",
+    "merge": ">=1.2.1",
+    "node-sass": "^4.10.0",
+    "npm": "^6.4.1",
+    "yargs": "^6.6.0"
+  },
+  "scripts": {
+    "start": "gulp start",
+    "watch": "gulp watch",
+    "build": "gulp build --production"
+  }
+}

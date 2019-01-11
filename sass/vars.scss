@@ -1,0 +1,60 @@
+$orange: #f0a31f;
+
+@mixin xlText {
+	font-size: 3.5rem;
+	line-height: 1.2em;
+}
+
+@mixin lgText {
+	font-size: 1.5rem;
+	line-height: 1.3em;
+}
+
+@mixin mdText {
+	font-size: 1.2rem;
+	line-height: 1.3em;
+}
+
+@mixin smText {
+	font-size: 22px;
+	line-height: 1.3em;
+}
+
+@mixin xsText {
+	font-size: .7rem;
+	line-height: 1.3em;
+}
+
+
+@font-face {
+	font-family: 'Algebra';
+	src: url('./../fonts/Algebra-Regular.woff2') format('woff2'),
+		url('./../fonts/Algebra-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Algebra';
+	src: url('./../fonts/Algebra-Bold.woff2') format('woff2'),
+		url('./../fonts/Algebra-Bold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Akkurat';
+	src: url('./../fonts/Akkurat.woff2') format('woff2'),
+		url('./../fonts/Akkurat.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Akkurat';
+	src: url('./../fonts/Akkurat-Bold.woff2') format('woff2'),
+		url('./../fonts/Akkurat-Bold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+}
+
