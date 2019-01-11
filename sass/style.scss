@@ -50,7 +50,7 @@ p {
 
 header {
 	border-bottom: 2px solid $orange;
-	svg {
+	object {
 		width: 100%;
 		max-width: 5rem;
 		height: auto;
@@ -83,7 +83,7 @@ section {
 }
 
 h1 {
-	svg {
+	object {
 		width: auto;
 		height: .8em;
 	}
