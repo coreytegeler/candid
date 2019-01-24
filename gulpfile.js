@@ -14,7 +14,7 @@ var gutil = require('gulp-util');
 var browsersync = require('browser-sync').create();
 
 function compilePug()  {
-	return gulp.src('./index.pug')
+	return gulp.src('./*.pug')
 		.pipe(plumber())
 		.pipe(pug())
 		.pipe(gulp.dest('./'))

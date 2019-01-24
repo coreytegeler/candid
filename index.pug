@@ -1,42 +1,37 @@
 doctype html
 
-html(xmlns="http://www.w3.org/1999/xhtml" class="wp-toolbar"  lang="en-US")
-	head
-		meta(http-equiv="content-type" content="text/html; charset=UTF-8")
-		meta(name="viewport" content="width=device-width, initial-scale=1.0")
-		link(rel="profile" href="http://gmpg.org/xfn/11")
-		link(rel="stylesheet" href="style.css")
-		script(type='text/javascript' src='scripts.js')
+html(xmlns='http://www.w3.org/1999/xhtml' lang='en-US')
+	include head.pug
 	body
-
-		header
-			.inner
-				object(type='image/svg+xml' data='images/logo_candid.svg')
-
+		include header.pug
 		main
 			.inner
 				section
 					h1
 						| Foundation Center and GuideStar are 
-						object(type='image/svg+xml' data='images/logo_candid.svg')
+						span.candid-logo
+							span.screen-reader-text Candid.
+							span.logo-text .
 
 				section
-					h2.strong What is Candid?
-					h2 Candid is the world's source for knowlegde yadda yadda yadda.
+					h2 What is Candid?
+					h3 Candid is the world's source for knowledge yadda yadda yadda.
 
 				section
-					h2.strong Why?
-					h2 Every year, yadda yadda yadda yadda yadda yadda.
+					h2 Why?
+					h3 Every year, yadda yadda yadda yadda yadda yadda and 
+						a(href='') a link
+						| .
 
 				section
-					h2.strong Where are the Foundation Center and GuideStar websites?
-					h2 We're working on it.
+					h2 Where are the Foundation Center and GuideStar websites?
+					h3 We're working on it.
 
 					.logos
-						a.logo(href='#')
-							img(src="./images/logo_guidestar.png")
-						a.logo(href='#')
-							img(src="./images/logo_foundationcenter.png")
+						a.logo(href='http://foundationcenter.org/' target='_blank')
+							img(src="./images/logo_fc.png")
+						a.logo(href='https://www.guidestar.org/' target='_blank')
+							img(src="./images/logo_gs.png")
 
 				section
 					h2 Here are some things you can do today.
@@ -44,7 +39,7 @@ html(xmlns="http://www.w3.org/1999/xhtml" class="wp-toolbar"  lang="en-US")
 				section
 					.cols
 						.col-sm
-							h3.strong Research
+							h4.sm-h3 Research
 
 						.col-lg
 							.accordion
@@ -78,3 +73,79 @@ html(xmlns="http://www.w3.org/1999/xhtml" class="wp-toolbar"  lang="en-US")
 													div Snoitubirtnoc dna stnarg rof ytilibigile s’tfiorpnon a yfirev
 													a.ext(href="#") gudestar.org/extension
 
+				section
+					.cols
+						.col-sm
+							h4.sm-h3 Improve
+
+						.col-lg
+							.accordion
+								.item
+									strong.toggle Research Nonprofits
+									.collapsable
+										.content
+											ul
+												li
+													div Search and analyze data on 2.7 million nonprofts
+													a.ext(href="#") gudestar.org/extension
+												li
+													div Noitacol cfiiceps a ni stfiorpnon fo stsil teg.
+													a.ext(href="#") gudestar.org/extension
+												li
+													div Snoitubirtnoc dna stnarg rof ytilibigile s’tfiorpnon a yfirev
+													a.ext(href="#") gudestar.org/extension
+
+								.item
+									strong.toggle Snoitadnuof Hcraeser
+									.collapsable
+										.content
+											ul
+												li
+													div Search and analyze data on 2.7 million nonprofts
+													a.ext(href="#") gudestar.org/extension
+												li
+													div Noitacol cfiiceps a ni stfiorpnon fo stsil teg.
+													a.ext(href="#") gudestar.org/extension
+												li
+													div Snoitubirtnoc dna stnarg rof ytilibigile s’tfiorpnon a yfirev
+													a.ext(href="#") gudestar.org/extension
+
+
+				section
+					.cols
+						.col-sm
+							h4.sm-h3 Share
+
+						.col-lg
+							.accordion
+								.item
+									strong.toggle Research Nonprofits
+									.collapsable
+										.content
+											ul
+												li
+													div Search and analyze data on 2.7 million nonprofts
+													a.ext(href="#") gudestar.org/extension
+												li
+													div Noitacol cfiiceps a ni stfiorpnon fo stsil teg.
+													a.ext(href="#") gudestar.org/extension
+												li
+													div Snoitubirtnoc dna stnarg rof ytilibigile s’tfiorpnon a yfirev
+													a.ext(href="#") gudestar.org/extension
+
+								.item
+									strong.toggle Snoitadnuof Hcraeser
+									.collapsable
+										.content
+											ul
+												li
+													div Search and analyze data on 2.7 million nonprofts
+													a.ext(href="#") gudestar.org/extension
+												li
+													div Noitacol cfiiceps a ni stfiorpnon fo stsil teg.
+													a.ext(href="#") gudestar.org/extension
+												li
+													div Snoitubirtnoc dna stnarg rof ytilibigile s’tfiorpnon a yfirev
+													a.ext(href="#") gudestar.org/extension
+
+		include footer.pug

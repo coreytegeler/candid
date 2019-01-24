@@ -12,27 +12,50 @@ version 2.0 (http://www.gnu.org/licenses/gpl-2.0.html)
 @import 'vars.scss';
 
 html, body {
+	width: 100%;
 	margin: 0;
 	background: #fff;
 	font-family: 'Algebra', serif;
 	@include smText;
 }
 
-h1, h2, h3 {
+body {
+	display: table;
+}
+
+h1, h2, h3, h4 {
 	margin: 0;
-	font-weight: normal;
 }
 
 h1 {
 	@include xlText;
+	font-weight: normal;
 }
 
 h2 {
 	@include lgText;
+	font-weight: bold;
 }
 
 h3 {
-	@include mdText;
+	@include lgText;
+	font-weight: normal;
+}
+
+h4 {
+	@include smText;
+	font-weight: bold;
+	@include sm {
+		margin-bottom: 1rem;
+		&.sm-h3 {
+			@include lgText;
+		}
+	}
+}
+
+h5 {
+	@include smText;
+	font-weight: normal;
 }
 
 a, a:visited {
@@ -46,22 +69,30 @@ a, a:visited {
 
 p {
 	margin: 0 0 2rem 0;
+	&:last-of-type {
+		margin: 0;
+	}
 }
 
-header {
-	border-bottom: 2px solid $orange;
-	object {
-		width: 100%;
-		max-width: 5rem;
-		height: auto;
+.mobile {
+	@include hide;
+}
+@include sm {
+	.mobile {
+		@include show;
+	}
+	.desktop {
+		@include hide;
 	}
 }
 
 .inner {
-	margin-left: 6rem;
-	padding: 2rem 6rem .25rem .75rem;
+	width: calc(80% - .75rem);
+	max-width: 1600px;
+	margin-left: 10%;
+	padding: 2rem 10% .25rem .75rem;
 	display: table;
-	border-left: 2px solid $orange;
+	border-left: 2px solid $yellow;
 	main & {
 		padding-bottom: 4rem;
 	}
@@ -78,15 +109,65 @@ li {
 }
 
 section {
+	width: 100%;
 	margin: 0 0 3rem 0;
-	clear: both;
+	// clear: both;
 }
 
-h1 {
-	object {
-		width: auto;
-		height: .8em;
+h2, p {
+	a {
+		background-image: linear-gradient(white 50%, $yellow 50%);
+		background-position: 0 .85em;
+		background-repeat: repeat-x;
+    background-size: 4px 4px;
+	  text-shadow:
+	    1px 1px white,
+	    1px -1px white,
+	    -1px 1px white,
+	    -1px -1px white;
 	}
+}
+
+.candid-logo {
+	.logo-text {
+		font-family: 'Candid';
+	}
+	.screen-reader-text {
+		@include hide;
+	}
+}
+
+header {
+	width: 100%;
+	border-bottom: 2px solid $yellow;
+	font-family: 'Akkurat', serif;
+	@include xsText;
+	a {
+		display: table;
+	}
+	.candid-logo {
+		@include lgText;
+	}
+	.faq {
+		height: 100%;
+		display: table;
+		float: right;
+		padding: 0 0 .25rem 0;
+    a {
+			display: table-cell;
+			vertical-align: bottom;
+		}
+  }
+	object {
+		width: 100%;
+		max-width: 5rem;
+		height: auto;
+		pointer-events: none;
+	}
+}
+
+main {
+	width: 100%;
 }
 
 .logos {
@@ -94,14 +175,17 @@ h1 {
 	margin: 1rem 0 0 0;
 	display: table;
 	.logo {
-		margin: 0 1rem 0 0;
+		margin: 0 2rem 0 0;
 		padding: .5rem;
 		float: left;
-		border: 2px solid $orange;
+		background-color: $gray;
 		img {
 			width: auto;
 			height: 3rem;
 			display: table;
+		}
+		&:hover {
+			background-color: $yellow;
 		}
 	}
 }
@@ -109,15 +193,25 @@ h1 {
 .cols {
 	display: flex;
 	flex-direction: row;
-	flex-wrap: wrap;
+	flex-wrap: wrap;	
 }
-
 .col-sm {
 	width: 30%;
 }
+.col-md {
+	width: 50%;
+}
 .col-lg {
-	width: 70%;
+	width: calc(70% - 1rem;);
 	max-width: 30rem;
+	margin-left: 1rem;
+}
+.col-sm, .col-lg {
+	@include sm {
+		width: 100%;
+		max-width: 100%;
+		margin: 0;
+	}
 }
 
 .accordions {
@@ -140,15 +234,17 @@ h1 {
 	padding: 0 0 1rem 0;
 	backface-visibility: hidden;
 	transform-style: preserve-3d;
+	user-select: none;
 	&::before, &::after {
 		width: .25rem;
 		height: 1rem;
 		position: absolute;
 		right: .5rem;
 		top: 0;
-		background: $orange;
+		background: $yellow;
 		transition: all 200ms ease;
 		content: '';
+		transform: translate3d(0,0,0);
 	}
 	&::before {
 		transform: rotate(0deg);
@@ -191,4 +287,44 @@ h1 {
 	display: table;
 	font-family: 'Akkurat', serif;
 	@include xsText;
+}
+
+footer {
+	background-color: $yellow;
+	font-family: 'Akkurat', serif;
+	@include xsText;
+	.inner {
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+	}
+	p {
+		margin: 0 0 1rem 0;
+		&:last-of-type {
+			margin: 0;
+		}
+		a {
+			background-image: linear-gradient($yellow 50%, black 50%);
+			background-position: 0 1em;
+	    background-size: 2px 2px;
+		  text-shadow:
+		    1px 1px $yellow,
+		    1px -1px $yellow,
+		    -1px 1px $yellow,
+		    -1px -1px $yellow;
+		}
+	}
+	.icon {
+		margin: 0 .5rem 0 0;
+		float: left;
+		background-color: black;
+		img {
+			width: 1rem;
+			height: 1rem;
+			display: table;
+			opacity: 0;
+		}
+		// &:hover {
+		// 	background-color: $yellow;
+		// }
+	}
 }
