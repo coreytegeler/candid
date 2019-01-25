@@ -97,7 +97,7 @@ p {
 		padding-bottom: 4rem;
 	}
 	@include md {
-		width: calc(100% - .75rem - 112px);
+		width: calc(100% - 2rem - 32px);
 		margin-left: 30px;
 	}
 }
