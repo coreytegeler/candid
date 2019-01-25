@@ -1,32 +1,55 @@
 $yellow: #febe10;
-$gray: #efecea;
+$light: #efecea;
+$medium: #ac9f9a;
 
 @mixin xlText {
-	font-size: 3.5rem;
-	line-height: 1.2em;
-}
-
-@mixin lgText {
-	font-size: 1.8rem;
-	line-height: 1.3em;
-}
-
-@mixin mdText {
-	font-size: 1.2rem;
-	line-height: 1.3em;
-}
-
-@mixin smText {
-	font-size: 22px;
-	line-height: 1.3em;
+	// font-size: 3.5rem;
+	// line-height: 1.2em;
+	font-size: 90px;
+	line-height: 100px;
 	@include md {
-		font-size: 18px;
+		font-size: 33px;
+		line-height: 37px;
 	}
 }
 
+@mixin lgText {
+	// font-size: 1.8rem;
+	// line-height: 1.3em;
+	font-size: 38px;
+	line-height: 50px;
+	@include md {
+		font-size: 22px;
+		line-height: 30px;
+	}
+}
+
+@mixin mdText {
+	// font-size: 1.2rem;
+	// line-height: 1.3em;
+	font-size: 22px;
+	line-height: 30px;
+	@include md {
+		font-size: 22px;
+		line-height: 30px;
+	}
+}
+
+@mixin smText {
+	font-size: 18px;
+	line-height: 27px;
+	@include md {
+		font-size: 16px;
+		line-height: 24px;
+	}
+	// @include md {
+		// font-size: 16px;
+	// }
+}
+
 @mixin xsText {
-	font-size: .7rem;
-	line-height: 1.3em;
+	font-size: 13px;
+	line-height: 27px;
 }
 
 
