@@ -65,6 +65,13 @@ $medium: #ac9f9a;
 	}
 }
 
+
+@mixin lg {
+	@media (max-width: 1290px) {
+		@content;
+	}
+}
+
 @mixin hide {
 	position: absolute;
 	top: -9999px;
