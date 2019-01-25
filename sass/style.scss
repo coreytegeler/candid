@@ -87,7 +87,7 @@ p {
 }
 
 .inner {
-	width: calc(100% - 2rem - 110px);
+	width: calc(100% - 2rem - 112px);
 	max-width: 1600px;
 	margin-left: 110px;
 	padding: 2rem 1rem .25rem 1rem;
@@ -97,7 +97,7 @@ p {
 		padding-bottom: 4rem;
 	}
 	@include md {
-		width: calc(100% - .75rem - 110px);
+		width: calc(100% - .75rem - 112px);
 		margin-left: 30px;
 	}
 }
@@ -190,10 +190,10 @@ main {
 		background-position: center;
 		background-repeat: no-repeat;
 		&.fc {
-			background-image: url(./../images/logo_fc.png);
+			background-image: url(./images/logo_fc.png);
 		}
 		&.gs {
-			background-image: url(./../images/logo_gs.png);
+			background-image: url(./images/logo_gs.png);
 		}
 		span {
 			@include hide;
