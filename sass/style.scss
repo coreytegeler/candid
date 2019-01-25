@@ -23,7 +23,7 @@ body {
 	display: table;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5 {
 	margin: 0;
 }
 
@@ -88,7 +88,7 @@ p {
 
 .inner {
 	width: calc(100% - 2rem - 112px);
-	max-width: 1200px;
+	max-width: 900px;
 	margin-left: 110px;
 	padding: 2rem 1rem .25rem 1rem;
 	display: table;
@@ -162,12 +162,6 @@ header {
 			vertical-align: bottom;
 		}
   }
-	object {
-		width: 100%;
-		max-width: 5rem;
-		height: auto;
-		pointer-events: none;
-	}
 	@include md {
 		.col-sm, .col-lg {
 			width: 50%;
@@ -237,7 +231,6 @@ main {
 }
 .col-lg {
 	width: calc(70% - 1rem;);
-	max-width: 30rem;
 	margin-left: 1rem;
 }
 .col-sm, .col-lg {
@@ -274,7 +267,7 @@ main {
 		height: 1rem;
 		position: absolute;
 		right: .5rem;
-		top: 0;
+		top: .125rem;
 		background: $yellow;
 		transition: all 200ms ease;
 		content: '';
@@ -323,6 +316,21 @@ main {
 	@include xsText;
 	a {
 		color: $medium;
+		&:hover {
+			background-image: linear-gradient(white 50%, $yellow 50%);
+			background-repeat: repeat-x;
+			background-position: 0 1em;
+	    background-size: 2px 2px;
+		  text-shadow:
+		    1px 1px white,
+		    1px -1px white,
+		    -1px 1px white,
+		    -1px -1px white;
+	  }
+	}
+	span {
+		margin: 0 .25rem;
+		color: $yellow;
 	}
 }
 
@@ -341,6 +349,7 @@ footer {
 		}
 		a {
 			background-image: linear-gradient($yellow 50%, black 50%);
+			background-repeat: repeat-x;
 			background-position: 0 1em;
 	    background-size: 2px 2px;
 		  text-shadow:
