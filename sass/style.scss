@@ -88,7 +88,7 @@ p {
 
 .inner {
 	width: calc(100% - 2rem - 112px);
-	max-width: 1600px;
+	max-width: 1200px;
 	margin-left: 110px;
 	padding: 2rem 1rem .25rem 1rem;
 	display: table;
@@ -168,6 +168,11 @@ header {
 		height: auto;
 		pointer-events: none;
 	}
+	@include md {
+		.col-sm, .col-lg {
+			width: 50%;
+		}
+	}
 }
 
 main {
@@ -191,6 +196,9 @@ main {
 		background-repeat: no-repeat;
 		&.fc {
 			background-image: url(./images/logo_fc.png);
+			@include sm {
+				margin-bottom: 1rem;
+			}
 		}
 		&.gs {
 			background-image: url(./images/logo_gs.png);
@@ -205,10 +213,6 @@ main {
 		// }
 		&:hover {
 			background-color: $yellow;
-		}
-		@include sm {
-			margin: 0 0 1rem 0;
-			float: none;
 		}
 	}
 }
