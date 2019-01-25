@@ -87,14 +87,18 @@ p {
 }
 
 .inner {
-	width: calc(80% - .75rem);
+	width: calc(100% - 2rem - 110px);
 	max-width: 1600px;
-	margin-left: 10%;
-	padding: 2rem 10% .25rem .75rem;
+	margin-left: 110px;
+	padding: 2rem 1rem .25rem 1rem;
 	display: table;
 	border-left: 2px solid $yellow;
 	main & {
 		padding-bottom: 4rem;
+	}
+	@include md {
+		width: calc(100% - .75rem - 110px);
+		margin-left: 30px;
 	}
 }
 
@@ -151,7 +155,7 @@ header {
 	.faq {
 		height: 100%;
 		display: table;
-		float: right;
+		// float: right;
 		padding: 0 0 .25rem 0;
     a {
 			display: table-cell;
@@ -175,17 +179,36 @@ main {
 	margin: 1rem 0 0 0;
 	display: table;
 	.logo {
+		width: 7rem;
+		height: 3rem;
 		margin: 0 2rem 0 0;
 		padding: .5rem;
+		display: block;
 		float: left;
-		background-color: $gray;
-		img {
-			width: auto;
-			height: 3rem;
-			display: table;
+		background-color: $light;
+		background-size: 90%;
+		background-position: center;
+		background-repeat: no-repeat;
+		&.fc {
+			background-image: url(./../images/logo_fc.png);
 		}
+		&.gs {
+			background-image: url(./../images/logo_gs.png);
+		}
+		span {
+			@include hide;
+		}
+		// img {
+		// 	width: auto;
+		// 	height: 3rem;
+		// 	display: table;
+		// }
 		&:hover {
 			background-color: $yellow;
+		}
+		@include sm {
+			margin: 0 0 1rem 0;
+			float: none;
 		}
 	}
 }
@@ -240,7 +263,7 @@ main {
 	transform-style: preserve-3d;
 	user-select: none;
 	&::before, &::after {
-		width: .25rem;
+		width: 2px;
 		height: 1rem;
 		position: absolute;
 		right: .5rem;
@@ -286,11 +309,14 @@ main {
 	padding: 0 1rem 0 0;
 }
 
-.ext {
-	opacity: .4;
+.links {
+	color: $medium;
 	display: table;
 	font-family: 'Akkurat', serif;
 	@include xsText;
+	a {
+		color: $medium;
+	}
 }
 
 footer {
