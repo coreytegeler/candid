@@ -87,12 +87,12 @@ p {
 }
 
 .inner {
-	width: calc(100% - 2rem - 112px);
+	width: calc(100% - 2rem - #{$gutter*1.5 - 2px});
 	max-width: 900px;
-	margin-left: 110px;
+	margin: 0 #{$gutter/2} 0 $gutter;
 	padding: 2rem 1rem .25rem 1rem;
 	display: table;
-	border-left: 2px solid $yellow;
+	border-left: 2px solid $orange;
 	main & {
 		padding-bottom: 4rem;
 	}
@@ -118,9 +118,9 @@ section {
 	// clear: both;
 }
 
-h2, p {
+h2, h3, p {
 	a {
-		background-image: linear-gradient(white 50%, $yellow 50%);
+		background-image: linear-gradient(white 50%, $orange 50%);
 		background-position: 0 .85em;
 		background-repeat: repeat-x;
     background-size: 4px 4px;
@@ -143,7 +143,7 @@ h2, p {
 
 header {
 	width: 100%;
-	border-bottom: 2px solid $yellow;
+	border-bottom: 2px solid $orange;
 	font-family: 'Akkurat', serif;
 	@include xsText;
 	a {
@@ -165,6 +165,7 @@ header {
 	@include md {
 		.col-sm, .col-lg {
 			width: 50%;
+			margin: 0;
 		}
 	}
 }
@@ -268,7 +269,7 @@ main {
 		position: absolute;
 		right: .5rem;
 		top: .125rem;
-		background: $yellow;
+		background: $orange;
 		transition: all 200ms ease;
 		content: '';
 		transform: translate3d(0,0,0);
@@ -312,14 +313,16 @@ main {
 .links {
 	color: $medium;
 	display: table;
+	padding-top: 6px;
 	font-family: 'Akkurat', serif;
 	@include xsText;
 	a {
+		padding-bottom: .2em;
 		color: $medium;
 		&:hover {
-			background-image: linear-gradient(white 50%, $yellow 50%);
+			background-image: linear-gradient(white 50%, $orange 50%);
 			background-repeat: repeat-x;
-			background-position: 0 1em;
+			background-position: 0 1.2em;
 	    background-size: 2px 2px;
 		  text-shadow:
 		    1px 1px white,
@@ -333,7 +336,7 @@ main {
 		height: 1em;
 		margin: 0 .25rem -.125rem .25rem;
 		display: inline-block;
-		background: $yellow;
+		background: $orange;
 	}
 }
 
