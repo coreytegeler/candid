@@ -25,42 +25,45 @@ body {
 
 h1, h2, h3, h4, h5 {
 	margin: 0;
+	font-weight: normal;
 }
 
 h1 {
 	@include xlText;
-	font-weight: normal;
 }
 
 h2 {
 	@include lgText;
-	font-weight: bold;
 }
 
 h3 {
-	@include lgText;
-	font-weight: normal;
+	@include mdText;
 }
 
 h4 {
 	@include smText;
-	font-weight: bold;
-	@include sm {
-		margin-bottom: 1rem;
-		&.sm-h3 {
-			@include lgText;
-		}
-	}
+	// @include sm {
+		// margin-bottom: 1rem;
+		// &.sm-h3 {
+		// 	@include lgText;
+		// }
+	// }
 }
 
-h5 {
-	@include smText;
-	font-weight: normal;
-}
+// h5 {
+// 	@include smText;
+// 	font-weight: bold;
+// }
+
+// h6 {
+// 	@include smText;
+// 	font-weight: normal;
+// }
 
 a, a:visited {
 	text-decoration: none;
 	color: black;
+	word-break: break-all;
 }
 
 .strong {
@@ -68,7 +71,7 @@ a, a:visited {
 }
 
 p {
-	margin: 0 0 2rem 0;
+	margin: 0 0 1rem 0;
 	&:last-of-type {
 		margin: 0;
 	}
@@ -77,6 +80,7 @@ p {
 .mobile {
 	@include hide;
 }
+
 @include sm {
 	.mobile {
 		@include show;
@@ -87,17 +91,18 @@ p {
 }
 
 .inner {
-	width: calc(100% - 2rem - #{$gutter*1.5 - 2px});
-	max-width: 900px;
+	width: calc(100% - 2rem - #{$gutter*1.5 - 1px});
+	max-width: 1200px;
 	margin: 0 #{$gutter/2} 0 $gutter;
 	padding: 2rem 1rem .25rem 1rem;
 	display: table;
-	border-left: 2px solid $orange;
+	border-left: 1px solid $orange;
 	main & {
 		padding-bottom: 4rem;
 	}
+	// max-width: 900px;
 	@include md {
-		width: calc(100% - 2rem - 32px);
+		width: calc(100% - 2rem - 31px);
 		margin-left: 30px;
 	}
 }
@@ -120,10 +125,11 @@ section {
 
 h2, h3, p {
 	a {
+		padding-bottom: 2px;
 		background-image: linear-gradient(white 50%, $orange 50%);
-		background-position: 0 .85em;
+		background-position: 0 100%;
 		background-repeat: repeat-x;
-    background-size: 4px 4px;
+    background-size: 2px 2px;
 	  text-shadow:
 	    1px 1px white,
 	    1px -1px white,
@@ -143,7 +149,7 @@ h2, h3, p {
 
 header {
 	width: 100%;
-	border-bottom: 2px solid $orange;
+	border-bottom: 1px solid $orange;
 	font-family: 'Akkurat', serif;
 	@include xsText;
 	a {
@@ -264,7 +270,7 @@ main {
 	transform-style: preserve-3d;
 	user-select: none;
 	&::before, &::after {
-		width: 2px;
+		width: 1px;
 		height: 1rem;
 		position: absolute;
 		right: .5rem;
@@ -317,12 +323,12 @@ main {
 	font-family: 'Akkurat', serif;
 	@include xsText;
 	a {
-		padding-bottom: .2em;
+		padding-bottom: 2px;
 		color: $medium;
 		&:hover {
 			background-image: linear-gradient(white 50%, $orange 50%);
 			background-repeat: repeat-x;
-			background-position: 0 1.2em;
+			background-position: 0 100%;
 	    background-size: 2px 2px;
 		  text-shadow:
 		    1px 1px white,
@@ -332,7 +338,7 @@ main {
 	  }
 	}
 	span {
-		width: 2px;
+		width: 1px;
 		height: 1em;
 		margin: 0 .25rem -.125rem .25rem;
 		display: inline-block;
@@ -355,14 +361,11 @@ footer {
 		}
 		a {
 			background-image: linear-gradient($yellow 50%, black 50%);
-			background-repeat: repeat-x;
-			background-position: 0 1em;
-	    background-size: 2px 2px;
 		  text-shadow:
-		    1px 1px $yellow,
-		    1px -1px $yellow,
-		    -1px 1px $yellow,
-		    -1px -1px $yellow;
+	    1px 1px $yellow,
+	    1px -1px $yellow,
+	    -1px 1px $yellow,
+	    -1px -1px $yellow;
 		}
 	}
 	.icon {

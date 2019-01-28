@@ -8,8 +8,12 @@ $medium: #ac9f9a;
 $gutter: 100px;
 
 @mixin xlText {
-	font-size: 90px;
-	line-height: 108px;
+	font-size: 110px;
+	line-height: 132px;
+	@include xl {
+		font-size: 90px;
+		line-height: 108px;
+	}
 	@include lg {
 		font-size: 70px;
 		line-height: 84px;
@@ -21,8 +25,12 @@ $gutter: 100px;
 }
 
 @mixin lgText {
-	font-size: 34px;
-	line-height: 47px;
+	font-size: 42px;
+	line-height: 57px;
+	@include xl {
+		font-size: 34px;
+		line-height: 47px;
+	}
 	@include lg {
 		font-size: 30px;
 		line-height: 40px;
@@ -34,12 +42,12 @@ $gutter: 100px;
 }
 
 @mixin mdText {
-	font-size: 22px;
-	line-height: 30px;
-	// @include lg {
-	// 	font-size: 22px;
-	// 	line-height: 30px;
-	// }
+	font-size: 27px;
+	line-height: 37px;
+	@include xl {
+		font-size: 22px;
+		line-height: 30px;
+	}
 	@include md {
 		font-size: 20px;
 		line-height: 27px;
@@ -47,12 +55,12 @@ $gutter: 100px;
 }
 
 @mixin smText {
-	font-size: 18px;
-	line-height: 27px;
-	// @include lg {
-	// 	font-size: 16px;
-	// 	line-height: 24px;
-	// }
+	font-size: 22px;
+	line-height: 30px;
+	@include xl {
+		font-size: 18px;
+		line-height: 27px;
+	}
 	@include md {
 		font-size: 16px;
 		line-height: 24px;
@@ -60,8 +68,12 @@ $gutter: 100px;
 }
 
 @mixin xsText {
-	font-size: 13px;
-	line-height: 17px;
+	font-size: 16px;
+	line-height: 24px;
+	@include xl {
+		font-size: 13px;
+		line-height: 17px;
+	}
 }
 
 @mixin xl {
