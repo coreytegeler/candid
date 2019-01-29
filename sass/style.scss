@@ -108,6 +108,11 @@ p {
 		padding-bottom: 4rem;
 	}
 	// max-width: 900px;
+	@include lg {
+		width: calc(100% - 2rem - #{$gutter*.75 - 1px});
+		margin: 0 #{$gutter/4} 0 #{$gutter/2};
+		padding: 2rem 1rem .25rem 1rem;
+	}
 	@include md {
 		width: calc(100% - 2rem - 61px);
 		margin: 0 30px;
