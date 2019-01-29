@@ -89,7 +89,7 @@ $gutter: 100px;
 }
 
 @mixin md {
-	@media (max-width: 768px) {
+	@media (max-width: 667px) {
 		@content;
 	}
 }

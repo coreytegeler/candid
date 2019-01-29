@@ -109,8 +109,8 @@ p {
 	}
 	// max-width: 900px;
 	@include md {
-		width: calc(100% - 2rem - 31px);
-		margin-left: 30px;
+		width: calc(100% - 2rem - 61px);
+		margin: 0 30px;
 	}
 }
 
