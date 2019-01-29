@@ -38,6 +38,11 @@ h2 {
 
 h3 {
 	@include mdText;
+	@include sm {
+		&.sm-sm {
+			@include smText;
+		}
+	}
 }
 
 h4 {
@@ -63,7 +68,6 @@ h4 {
 a, a:visited {
 	text-decoration: none;
 	color: black;
-	word-break: break-all;
 }
 
 .strong {
@@ -74,6 +78,9 @@ p {
 	margin: 0 0 1rem 0;
 	&:last-of-type {
 		margin: 0;
+	}
+	a {
+		// word-break: break-all;
 	}
 }
 
@@ -229,6 +236,11 @@ main {
 		width: 100%;
 		height: auto;
 	}
+	@include sm {
+		h3 {
+			margin-bottom: 16px;
+		}
+	}
 }
 .col-sm {
 	width: 30%;
@@ -237,8 +249,8 @@ main {
 	width: 50%;
 }
 .col-lg {
-	width: calc(70% - 1rem;);
-	margin-left: 1rem;
+	width: calc(70% - 2rem;);
+	margin-left: 2rem;
 }
 .col-sm, .col-lg {
 	@include sm {
